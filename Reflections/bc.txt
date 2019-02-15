@@ -1,0 +1,6 @@
+BINOMIAL CO-EFFICIENT
+
+1D implementation is used when only final result is desired. Time complexity is n. In terms of space, this is the efficient one.
+2D implementation is useful when all the computation steps are required. Time complexity is (n*k).  
+Recursion is used for smaller values. Not efficient in terms of memory. 
+Comparing 2D and recursion, 2D is recommended as it stores the already computed values by dynamic programming whereas entire computation takes place in recursion.
