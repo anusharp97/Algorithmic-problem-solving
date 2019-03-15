@@ -1,0 +1,22 @@
+LOOK UP TABLE:
+•	Processing time is O(n^2).
+•	Space complexity is O(n^2).
+•	Searching time for an element is O(1).
+
+SQUARE ROOT DECOMPOSITION:
+•	Requires scanning of all the ‘n’ elements to build the table.
+•	Space complexity is O(sqrt(n)).
+•	O(sqrt(n)) comparisons to fetch the element.
+
+Both the above methods are efficient for dynamic values.
+
+SEGMENT TREE:
+•	Efficient method for static values.
+•	Tree building time is O(nlogn).
+•	Space complexity is O(nlogn).
+•	Searching time is O(logn).
+
+KADANE ALGORITHM:
+•	If the array has only positive values, then the maximum sub array is the entire array.
+•	If the array has only negative values, then the smallest negative element is the maximum sub array.
+•	Time complexity is O(n).
