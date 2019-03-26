@@ -13,23 +13,6 @@ void printArray(int H[], int n)
     }
     printf("\n");
 }
-void swap(int H[], int n)
-{
-    int temp;
-    temp=H[1];
-    H[1]=H[n];
-    H[n]=temp;
-}
-void heapSort(int H[],int n)
-{
-    //printf("Inside\n");
-    while(n>=1)
-    {
-        swap(H,n);
-        n=n-1;
-        bottomUpHeap(H,n);
-    }
-}
 
 void bottomUpHeap(int H[], int n)
 {
@@ -59,6 +42,23 @@ void bottomUpHeap(int H[], int n)
             }
         }
         H[k]=v;
+    }
+}
+void swap(int H[], int n)
+{
+    int temp;
+    temp=H[1];
+    H[1]=H[n];
+    H[n]=temp;
+}
+void heapSort(int H[],int n)
+{
+    //printf("Inside\n");
+    while(n>=1)
+    {
+        swap(H,n);
+        n=n-1;
+        bottomUpHeap(H,n);
     }
 }
 
