@@ -29,6 +29,8 @@ print(hasCycleDirected(1))
 
 '''
 Improvised code for cycle detection in graph using iterative DFS.
+Using 3 color dfs problem, -1 indicates undiscivered nodes, 0 indicated discovered nodes, 1 indicates processed nodes.
+When the node's state is already discovered and it encounters in the stack to be discovered again, then there exists cycle.
 '''
 UNDISCOVERED = -1
 DISCOVERED = 0
