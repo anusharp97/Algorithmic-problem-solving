@@ -25,3 +25,35 @@ def hasCycleDirected(start):
 graph = [[],[0,2,3,4],[3],[4],[]] #no cycle
 graph = [[],[0,2,3,4],[3],[4],[1]] # has cycle at node 1
 print(hasCycleDirected(1))
+
+
+'''
+Improvised code for cycle detection in graph using iterative DFS.
+'''
+UNDISCOVERED = -1
+DISCOVERED = 0
+PROCESSED = 1
+state = [UNDISCOVERED] * len(graph)
+def hasCycle(v: int) -> bool:
+    stack = [(v, 0)]
+    while stack:
+        curr, pos = stack[-1]
+        #print(curr,pos)
+        if state[curr] == PROCESSED:
+            stack.pop()
+            continue
+        if state[curr] == DISCOVERED and pos == 0:
+            return True
+        if pos == 0:
+            state[curr] = DISCOVERED
+
+        for i in range(pos, len(graph[curr])):
+            stack[-1] = curr, pos + 1
+            descendant = graph[curr][i]
+            stack.append((descendant, 0))
+            break
+        else:
+            #print(curr)
+            state[curr] = PROCESSED
+            #print(state)
+    return False
